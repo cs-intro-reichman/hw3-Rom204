@@ -14,6 +14,8 @@ public class Algebra {
    		System.out.println(plus(2,times(4,2)));  // 2 + 4 * 2
    		System.out.println(pow(5,3));      // 5^3
    		System.out.println(pow(3,5));      // 3^5
+   		System.out.println(div(-6,-2));   // 12 / 3    
+   		System.out.println(div(-6,2));   // 12 / 3    
    		System.out.println(div(12,3));   // 12 / 3    
    		System.out.println(div(5,5));    // 5 / 5  
    		System.out.println(div(25,7));   // 25 / 7
@@ -84,6 +86,21 @@ public class Algebra {
 	public static int div(int x1, int x2) {
 		if (x2 == 0) return -1;
 		int res = 0;
+		int counter = x1;
+
+		if (x1 < 0){
+			if (x2 < 0){
+				while (x1 <= x2){
+					x1 = minus(x1, x2);
+					res++;
+				}
+				return res;
+			} else {
+				x1 = minus(x1, x1);
+				x1 = minus(x1, counter);
+			}
+		}
+
 		while (x1 >= x2){
 			x1 = minus(x1, x2);
 			res++;
