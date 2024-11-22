@@ -97,5 +97,6 @@ public class Algebra {
             result++;
         }
         return minus(result, 1);
+		
 	}	  	  
 }
