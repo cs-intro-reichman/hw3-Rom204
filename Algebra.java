@@ -35,6 +35,7 @@ public class Algebra {
 				x1--;
 			}
 		}
+		
 		return x1;
 	}
 
