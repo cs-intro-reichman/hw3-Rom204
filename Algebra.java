@@ -96,9 +96,8 @@ public class Algebra {
 				}
 				return res;
 			} else {
-				// x1 = minus(x1, x1);
-				// x1 = minus(x1, counter);
-				x1 = -x1;
+				x1 = minus(x1, x1);
+				x1 = minus(x1, counter);
 			}
 		}
 
