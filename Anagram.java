@@ -10,8 +10,6 @@ public class Anagram {
 
 		// Tests the preProcess function.
 		System.out.println(preProcess("What? No way!!!"));
-		System.out.println(preProcess("YOHOMIE@@ 3123 2"));
-		System.out.println(preProcess("Rom1sC 12!"));
 		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
@@ -33,7 +31,7 @@ public class Anagram {
 	public static boolean isAnagram(String str1, String str2) {
 		String fixedStr1 = preProcess(str1);
 		String fixedStr2 = preProcess(str2);
-
+		
 		if (fixedStr1.length() != fixedStr2.length()) return false;
 
 		for (int i = 0; i < fixedStr1.length(); i++){
@@ -80,7 +78,6 @@ public class Anagram {
 
 			// remove char from str 
 			str = str.substring(0, ch) + str.substring(ch + 1);
-			
 		}
 		str = temp;
 		return str;
