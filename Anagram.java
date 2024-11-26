@@ -52,6 +52,7 @@ public class Anagram {
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	static String preProcess(String str) {
 		String temp = "";
+		boolean found = false;
 		for (int i = 0; i < str.length(); i++){
 			char c = str.charAt(i);
 			if ((c >= 'a') && (c <= 'z')){
@@ -59,6 +60,9 @@ public class Anagram {
 			} else if ((c >= 'A') && (c <= 'Z')){
 				c += 32;
 				temp += (char) c; 
+			} else if (c == ' ' && !found){
+				temp += c;
+				found = !found;
 			}
 		}
 		str = temp;
