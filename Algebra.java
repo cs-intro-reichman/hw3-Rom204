@@ -98,13 +98,19 @@ public class Algebra {
 			} else {
 				x1 = minus(x1, x1);
 				x1 = minus(x1, counter);
+				while (x1 >= x2){
+					x1 = minus(x1, x2);
+					res--;
+				}
+			}
+		} else {
+			while (x1 >= x2){
+				x1 = minus(x1, x2);
+				res++;
 			}
 		}
 
-		while (x1 >= x2){
-			x1 = minus(x1, x2);
-			res++;
-		}
+		
 		return res;
 	}
 
