@@ -7,6 +7,7 @@ public class Anagram {
 		System.out.println(isAnagram("William Shakespeare","I am a weakish speller")); // true
 		System.out.println(isAnagram("Madam Curie","Radium came")); // true
 		System.out.println(isAnagram("Tom Marvolo Riddle","I am Lord Voldemort")); // true
+		System.out.println(isAnagram("eea","aae")); // true
 
 		// Tests the preProcess function.
 		System.out.println(preProcess("What? No way!!!"));
@@ -39,6 +40,7 @@ public class Anagram {
 			for (int j = 0; j < fixedStr2.length(); j++){
 				if (fixedStr1.charAt(i) == fixedStr2.charAt(j)){
 					found = true;
+					fixedStr2 = fixedStr2.substring(0, j) + fixedStr2.substring(j + 1);
 					break;
 				}
 			}
